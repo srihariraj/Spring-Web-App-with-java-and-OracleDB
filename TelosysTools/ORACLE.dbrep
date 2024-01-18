@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Telosys Database Repository --><root>
+    <tableList databaseId="1" databaseName="ORACLE" databaseProductName="Oracle" generation="2024-01-13 18:08:48">
+        <table catalog="" databaseComment="" databaseType="TABLE" javaBean="Students" name="STUDENTS" schema="SYS">
+            <column dbComment="" dbDefaultValue="&quot;SYS&quot;.&quot;ISEQ$$_76706&quot;.nextval" dbName="ROLL" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="19" dbTypeName="NUMBER" inputType="number" javaName="roll" javaType="java.math.BigDecimal" jdbcTypeCode="2" label="Roll" notNull="true" selected="true"/>
+            <column dbComment="" dbDefaultValue="" dbName="DEPT" dbNotNull="false" dbPosition="2" dbSize="255" dbTypeName="VARCHAR2" inputType="text" javaName="dept" javaType="java.lang.String" jdbcTypeCode="12" label="Dept" maxLength="255" notNull="false" selected="true"/>
+            <column dbComment="" dbDefaultValue="" dbName="MARK" dbNotNull="false" dbPosition="3" dbSize="24" dbTypeName="FLOAT" inputType="number" javaName="mark" javaType="java.lang.Double" jdbcTypeCode="6" label="Mark" notNull="false" selected="true"/>
+            <column dbComment="" dbDefaultValue="" dbName="NAME" dbNotNull="false" dbPosition="4" dbSize="255" dbTypeName="VARCHAR2" inputType="text" javaName="name" javaType="java.lang.String" jdbcTypeCode="12" label="Name" maxLength="255" notNull="false" selected="true"/>
+        </table>
+    </tableList>
+</root>

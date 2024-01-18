@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databases defaultId="1" maxId="10">
+    <db dialect="org.hibernate.dialect.Oracle10gDialect" driver="oracle.jdbc.driver.OracleDriver" id="1" isolationLevel="" name="ORACLE" poolSize="1" typeName="ORACLE" url="jdbc:oracle:thin:@localhost:1521:XE">
+        <property name="user" value="SYS as SYSDBA"/>
+        <property name="password" value="test"/>
+        <metadata catalog="" schema="SYS" table-name-exclude="" table-name-include="" table-name-pattern="STUDENTS" table-types="TABLE"/>
+    </db>
+</databases>

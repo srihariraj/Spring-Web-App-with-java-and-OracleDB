@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Endpage</title>
+</head>
+<body>
+
+<H2 align = "CENTER"><span th:text="${Result}"></span></H2><BR><BR>
+
+
+ <table border="1" align = "CENTER" bgcol="yellow">
+        <thead>
+            <tr>
+            	<th>Sl.No</th>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Mark</th>
+            </tr>
+        </thead>
+        <tbody th:each="student : ${studentsall}">
+            <tr>
+            	<td th:text="${student.slno}"></td>
+                <td th:text="${student.Roll}"></td>
+                <td th:text="${student.Name}"></td>
+                <td th:text="${student.Dept}"></td>
+                <td th:text="${student.Mark}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
