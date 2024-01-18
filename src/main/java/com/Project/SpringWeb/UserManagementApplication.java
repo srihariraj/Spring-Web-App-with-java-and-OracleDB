@@ -9,7 +9,7 @@ public class UserManagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UserManagementApplication.class, args);
 
-		System.out.println("App Started Running");
+		
 	}
 
 }
