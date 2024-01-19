@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.Project.SpringWeb.Repo.DetailRepo;
 import com.Project.SpringWeb.Services.ServiceClass;
 import com.Project.SpringWeb.entities.Students;
 
@@ -18,7 +19,9 @@ import com.Project.SpringWeb.entities.Students;
 public class HomeController {
 	@Autowired
 	private ServiceClass SC;
-	
+	@Autowired
+	private DetailRepo D;
+
 	
 	@GetMapping("/")
 	public ModelAndView HomePage() {
@@ -37,6 +40,12 @@ public class HomeController {
 	{
 		String Result = null;
 		BigDecimal RollNumber = new BigDecimal(Roll);
+
+	// if(D.isTableEmpty()){
+	// 	 SC.alterSequenceDecrement();
+	// 	 SC.getNextValFromSequence();
+	// 	 SC.alterSequenceIncrement();
+	// }
 		M.addAttribute("User",Name);
 		M.addAttribute("Mark",Mark);
 		M.addAttribute("Dept",Dept);
@@ -53,8 +62,10 @@ public class HomeController {
 				Result="Registration success";
 				break;
 			case "Update":
-				
-				return new ModelAndView("redirect:/");
+			if(SC.existByRoll(new BigDecimal(Roll))) {
+				SC.updateStudentName(new BigDecimal(Roll), Name);
+				}
+				return new ModelAndView("Success");
 			
 			case "Delete":
 				if(SC.existByRoll(new BigDecimal(Roll))) {
@@ -62,7 +73,7 @@ public class HomeController {
 					}
 				Result="Deletion success";
 				break;
-			default: return new ModelAndView("redirect:/");
+			default: return new ModelAndView("Success");
 		}
 		M.addAttribute("Result",Result);
 		Iterable<Students> studentsall = SC.findAll();

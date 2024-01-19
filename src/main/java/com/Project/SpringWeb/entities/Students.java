@@ -40,13 +40,13 @@ public class Students implements Serializable {
     private BigDecimal roll ;
 
     //--- ENTITY DATA FIELDS 
-    @Column(name="DEPT", length=255, nullable=false)
+    @Column(name="DEPT", length=10, nullable=false)
     private String     dept ;
 
     @Column(name="MARK", nullable=false)
     private Double     mark ;
 
-    @Column(name="NAME", length=255, nullable=false)
+    @Column(name="NAME", length=20, nullable=false)
     private String     name ;
 	@Override
     public String toString() { 

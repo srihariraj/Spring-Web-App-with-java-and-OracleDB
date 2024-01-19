@@ -28,4 +28,13 @@ public interface DetailRepo extends CrudRepository<Students, BigDecimal> {
     @Query("UPDATE Students s SET s.name = :name WHERE s.roll = :roll")
     void updateStudentName(@Param("roll") BigDecimal roll, @Param("name") String name);
 
+
+
+	@Query("SELECT COUNT(e) FROM Students e")
+    long countAllStudents();
+
+    default boolean isTableEmpty() {
+        return countAllStudents() == 0;
+	}
+
 }
