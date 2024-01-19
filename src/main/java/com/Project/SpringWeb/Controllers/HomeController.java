@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.Project.SpringWeb.Repo.DetailRepo;
 import com.Project.SpringWeb.Services.ServiceClass;
 import com.Project.SpringWeb.entities.Students;
 
@@ -19,8 +18,7 @@ import com.Project.SpringWeb.entities.Students;
 public class HomeController {
 	@Autowired
 	private ServiceClass SC;
-	@Autowired
-	private DetailRepo D;
+	
 
 	
 	@GetMapping("/")
